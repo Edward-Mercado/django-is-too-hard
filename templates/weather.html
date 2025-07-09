@@ -2,14 +2,14 @@
 <html>
   <head>
     <title> Basic Weather App </title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
   </head>
   
   <body>
-    <h1 class="title"> City Name </h1>
+    <h1 class="title"> {{name}} </h1>
     <div class="div1"> 
       <h4 text-align: center> --- DATE --- </h4>
-      <p> TIME</p>
+      <p> {{today}}</p>
       <script src="script.js"></script>
       <h4 text-align: center> --- DATE --- </h4>
     </div>
@@ -18,7 +18,7 @@
     
     <div class="div2">
       <h4 text-align: center> --- TEMPERATURE --- </h4>
-      <p> Ex. °C </p>
+      <p> {{temp}} °C </p>
       <script src="script.js"></script>
       <h4 text-align: center> --- TEMPERATURE --- </h4>
     </div>
@@ -27,7 +27,7 @@
       
     <div class="div3">
       <h4 text-align: center> --- WEATHER DESCRIPTION --- </h4>
-      <p> sample flavor text </p>
+      <p> {{weather_description}} </p>
       <script src="script.js"></script>
       <h4 text-align: center> --- WEATHER DESCRIPTION --- </h4>
     </div>
@@ -36,7 +36,7 @@
       
     <div class="div4">
       <h4 text-align: center> --- HUMIDITY --- </h4>
-      <p> ex. % </p>
+      <p> {{humidity}} % </p>
       <script src="script.js"></script>
       <h4 text-align: center> --- HUMIDITY --- </h4>
     </div>
@@ -45,7 +45,7 @@
       
     <div class="div5">
       <h4 text-align: center> --- WIND SPEED --- </h4>
-      <p> ex. m/s </p>
+      <p> {{wind_speed}} m/s </p>
       <script src="script.js"></script>
       <h4 text-align: center> --- WIND SPEED --- </h4>
     </div>
