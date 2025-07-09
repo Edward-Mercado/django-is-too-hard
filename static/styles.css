@@ -3,6 +3,12 @@ body{
     text-align: center;
     background-color: #D2F3E9;
   }
+
+p {
+  size: 8px;
+  color: #FFFFFF;
+}
+
   .hometitle {
 	color: #FFFFFF;
 	text-align: center;

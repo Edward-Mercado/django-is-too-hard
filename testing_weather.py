@@ -6,7 +6,7 @@ BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 cityinput = input("Enter a city name: ")
 city = cityinput.replace("_", " ")
-print(city)
+
 
 params = {
 "q": city,
@@ -25,4 +25,4 @@ if response.status_code == 200:
     print(f"Humidity: {data['main']['humidity']}%")
     print(f"Wind Speed: {data['wind']['speed']} m/s")
 else:
-    print("fuck you")
+    print("not possible")
