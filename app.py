@@ -58,26 +58,30 @@ def home():
 @app.route("/<city_name>")
 def city_home(city_name):
     city_data = get_weather_data(city_name)
-    temp = city_data[1]
     
-    color = (138, 226, 255)
-    
-    if temp > 5:
-        color = (111, 208, 232)
-    if temp > 10:
-        color = (80, 199, 185)
-    if temp > 15:
-        color = (59, 196, 137)
-    if temp > 20:
-        color = (59, 196, 137)
-    if temp > 25:
-        color = (240, 236, 48)
-    if temp > 30:
-        color = (240, 176, 29)
-    if temp > 35:
-        color = (240, 152, 29)
-    if temp > 45:
-        color = (209, 50, 25)
+    try:
+        temp = city_data[1]
+        color = (138, 226, 255)
+        
+        if temp > 5:
+            color = (111, 208, 232)
+        if temp > 10:
+            color = (80, 199, 185)
+        if temp > 15:
+            color = (59, 196, 137)
+        if temp > 20:
+            color = (59, 196, 137)
+        if temp > 25:
+            color = (240, 236, 48)
+        if temp > 30:
+            color = (240, 176, 29)
+        if temp > 35:
+            color = (240, 152, 29)
+        if temp > 45:
+            color = (209, 50, 25)
+            
+    except TypeError:
+        color = (0, 0, 0)
     
     try:
         return render_template('weather.html', 
@@ -90,8 +94,8 @@ def city_home(city_name):
                            temp_color = color
                            )
     except TypeError:
-        return render_template('error.html')
-        
+        return render_template('error404.html')
+     
 @app.route("/input", methods= ['GET', 'POST'])
 def submit_search():
     if request.method == 'POST':
