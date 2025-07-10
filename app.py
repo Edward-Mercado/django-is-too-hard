@@ -76,7 +76,7 @@ def city_home(city_name):
 def submit_search():
     if request.method == 'POST':
         new_route = request.form.get('city_target')
-        return redirect(url_for('/city_home', city_name=new_route))
+        return redirect(url_for('city_home', city_name=new_route))
     return render_template('index.html')
         
         

@@ -7,14 +7,14 @@
     <div class="div1">
       <h1 class="hometitle"> WEATHER APP </h1>
       <p id="currentTime" class="hometitle"></p>
-      <p class="hometitle"> Search for a city and find the weather. </p>
+      <p class="hometitle"> Search for a city (or country.) and find the weather. </p>
     </div>
   <div class="filler">
   </div>  
   
   <div class="div2b">
-    <form method="POST">
-      <input id="city_target" placeholder="Enter a City Name." class="searchbox">
+    <form method="POST" action ="/input">
+      <textarea rows="1" cols="70" name="city_target" placeholder="Enter a City Name. Or country." class="searchbox"> </textarea>
       <input type="submit" value="Submit">
     </form>
   </div>
