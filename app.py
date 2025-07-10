@@ -49,7 +49,6 @@ def get_weather_data(cityinput):
         ]
         return list(city_data)
         
-        
     else:
         pass
 
@@ -82,7 +81,6 @@ def submit_search():
 @app.route("/recommendation")
 def common_city_buttons(city_name):
     return redirect(url_for('city_home', city_name=city_name))
-        
         
 """
 Clear: Clear skies.
