@@ -70,14 +70,7 @@ def city_home(city_name):
                            today = city_data[5]
                            )
     except TypeError:
-        return render_template('weather.html', 
-                           name = city_data[0], 
-                           temp = city_data[1], 
-                           weather_description = city_data[2],
-                           humidity = city_data[3],
-                           wind_speed = city_data[4],
-                           today = city_data[5]
-                           )
+        return render_template('error.html')
         
 @app.route("/input", methods= ['GET', 'POST'])
 def submit_search():

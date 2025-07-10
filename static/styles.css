@@ -85,3 +85,13 @@ p {
     color: #CBEDEE;
     text-align: center;
   }
+
+  .error {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border-color: red;
+    border-width: 10px;
+    border-style: dashed;
+    text-align: center;
+  }
