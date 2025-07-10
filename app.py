@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 import requests
 from datetime import date
 
@@ -51,7 +51,7 @@ def get_weather_data(cityinput):
         
         
     else:
-        print("fuck you")
+        pass
 
 @app.route("/")
 def home():
@@ -70,7 +70,21 @@ def city_home(city_name):
                            today = city_data[5]
                            )
     except TypeError:
-        print('do you think i give a shit about type errors, it works man...')
+        return render_template('weather.html', 
+                           name = city_data[0], 
+                           temp = city_data[1], 
+                           weather_description = city_data[2],
+                           humidity = city_data[3],
+                           wind_speed = city_data[4],
+                           today = city_data[5]
+                           )
+        
+@app.route("/input", methods= ['GET', 'POST'])
+def submit_search():
+    if request.method == 'POST':
+        new_route = request.form.get('city_target')
+        return redirect(url_for('/city_home', city_name=new_route))
+    return render_template('index.html')
         
         
 """

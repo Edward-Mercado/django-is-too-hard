@@ -43,6 +43,14 @@ p {
     border-color: black;
     border-width: 5px;
   }
+
+  .div2b {
+    background-color: #73B6B3;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    padding: 25px;
+  }
   
   .div3 {
     background-color: #73B2B6;
@@ -63,4 +71,17 @@ p {
     border-style: solid;
     border-color: black;
     border-width: 5px;
+  }
+
+  .searchbox {
+    background-color: #2d739e;
+    border-style: dashed;
+    border-color: rgb(21, 28, 104);
+    border-width: 2px;
+    padding: 25px;
+    width: 250px;
+    font-size: 16px;
+    font-family: Georgia;
+    color: #CBEDEE;
+    text-align: center;
   }
