@@ -32,7 +32,6 @@ def get_weather_data(cityinput):
     response = requests.get(BASE_URL, params=params)
 
     city_date = convert_to_nice_looking_date(date.today())
-
     if response.status_code == 200:
         data = response.json()
         city_temp = round(data['main']['temp'])
