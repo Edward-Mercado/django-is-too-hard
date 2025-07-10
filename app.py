@@ -13,13 +13,13 @@ def convert_to_nice_looking_date(date):
         "index_0", "January", "February", "March", "April", "May", "June", 
         "July", "August", "September", "October", "November", "December"
     ]
+    
     pieces_of_date = str(date).split("-")
     year = pieces_of_date[0]
     day = int(pieces_of_date[2])
     month = months[int(pieces_of_date[1])]
     return f"{month} {day}, {year}"
     
-
 def get_weather_data(cityinput): 
     city = cityinput.replace("_", " ").title()
     
@@ -78,6 +78,10 @@ def submit_search():
         new_route = request.form.get('city_target')
         return redirect(url_for('city_home', city_name=new_route))
     return render_template('index.html')
+
+@app.route("/recommendation")
+def common_city_buttons(city_name):
+    return redirect(url_for('city_home', city_name=city_name))
         
         
 """

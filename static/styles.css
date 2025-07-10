@@ -108,3 +108,29 @@ p {
   .button-link:hover {
     background-color: #005fa3;
   }
+
+  .selector {
+    background-color: black;
+    color: white;
+    font-family: Tahoma;
+    font-size: 20px;
+    border-style: solid;
+    border-color: #005fa3;
+    border-width: 3px;
+  }
+
+  .city-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2f5f77;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 20px;
+    padding: 40px;
+    align-content: left;
+    width: 650px;
+  }
+  .city-button:hover {
+    background-color: #478ba3;
+  }

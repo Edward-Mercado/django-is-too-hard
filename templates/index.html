@@ -7,17 +7,28 @@
     <div class="div1">
       <h1 class="hometitle"> WEATHER APP </h1>
       <p id="currentTime" class="hometitle"></p>
-      <p class="hometitle"> Search for a city (or country.) and find the weather. </p>
     </div>
   <div class="filler">
   </div>  
   
   <div class="div2b">
+    <h5 class="hometitle"> Search for a city or country. </h5>
     <form method="POST" action ="/input">
-      <textarea rows="1" cols="70" name="city_target" placeholder="Enter a City Name. Or country." class="searchbox"> </textarea>
+      <textarea rows="1" cols="70" name="city_target" placeholder="Enter a City Name. Or country." class="searchbox"> </textarea> <br> </br>
       <input type="submit" value="Submit">
     </form>
   </div>
+
+  <div class="selector">
+    <h2 class="hometitle"> Recommended Cities </h2>
+    <a href="/new_york_city" class="city-button"> New York City </a> <br> </br>
+    <a href="/paris" class="city-button"> Paris </a> <br> </br>
+    <a href="/moscow" class="city-button"> Moscow </a> <br> </br>
+    <a href="/london" class="city-button"> London </a> <br> </br>
+
+    <div class="filler"></div>  
+
+  <div>
 
   </body>
 </html>
