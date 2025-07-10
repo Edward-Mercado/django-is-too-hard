@@ -35,7 +35,7 @@ def get_weather_data(cityinput):
 
     if response.status_code == 200:
         data = response.json()
-        city_temp = data['main']['temp']
+        city_temp = round(data['main']['temp'])
         city_weather_description = data['weather'][0]['description']
         city_humidity = data['main']['humidity']
         city_wind_speed = data['wind']['speed']
